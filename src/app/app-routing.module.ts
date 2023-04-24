@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { PantallaExamenComponent} from './components/pantalla-examen/pantalla-examen.component'
+const routes: Routes = [
+  {path:'', redirectTo:'inicio', pathMatch: 'full'},
+  {path:'inicio', component:PantallaExamenComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
