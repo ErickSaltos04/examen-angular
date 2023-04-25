@@ -1,0 +1,23 @@
+<p-toast></p-toast>
+<div class="card flex justify-content-center">
+    <p-panel header="Lista de Pokemon">
+        <p-table [columns]="columnTabla" [value]="listPokemon" [tableStyle]="{ 'min-width': '50rem' }" 
+                    [paginator]="true" [rows]="5" [showCurrentPageReport]="true" 
+                    [currentPageReportTemplate]="'Mostrando {first} a {last} de {totalRecords} registros'"
+                    [rowsPerPageOptions]="[5,10,15]" >
+        <ng-template pTemplate="header" let-cols>
+            <tr>
+                <th *ngFor="let col of cols" >
+                    {{col.header}}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pokemon>
+            <tr>
+                <td>{{ pokemon.name }}</td>
+                <td>{{ pokemon.url }}</td>
+            </tr>
+        </ng-template>
+        </p-table>
+    </p-panel>
+</div>

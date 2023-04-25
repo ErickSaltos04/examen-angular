@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PantallaExamenComponent} from './components/pantalla-examen/pantalla-examen.component'
+import { PantallaExamenComponent} from './pages/pantalla-examen/pantalla-examen.component'
 const routes: Routes = [
-  {path:'', redirectTo:'inicio', pathMatch: 'full'},
-  {path:'inicio', component:PantallaExamenComponent}
+  {path:'', redirectTo:'pokemon', pathMatch: 'full'},
+  {path:'pokemon', component:PantallaExamenComponent}
 ];
 
 @NgModule({
